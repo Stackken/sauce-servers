@@ -2,6 +2,7 @@
   "scripts": [
     {
       "name": "script1",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
       "description": "Dummy script for testing",
       "script": [
         "echo hello"
@@ -9,6 +10,7 @@
     },
     {
       "name": "script2",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
       "description": "Dummy script for testing two",
       "script": [
         "echo baloo"
