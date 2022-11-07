@@ -1,0 +1,18 @@
+{
+  "scripts": [
+    {
+      "name": "script1",
+      "description": "Dummy script for testing",
+      "script": [
+        "echo hello"
+      ]
+    },
+    {
+      "name": "script2",
+      "description": "Dummy script for testing two",
+      "script": [
+        "echo baloo"
+      ]
+    }
+  ]
+}
