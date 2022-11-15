@@ -15,6 +15,14 @@
       "script": [
         "echo baloo"
       ]
+    },
+    {
+      "name": "Real script Doing Things",
+      "icon": "https://winaero.com/blog/wp-content/uploads/2017/04/remote-desktop-rdp-mstsc-icon.png",
+      "description": "Install IPBan software",
+      "script": [
+        "echo baloo"
+      ]
     }
   ]
 }
