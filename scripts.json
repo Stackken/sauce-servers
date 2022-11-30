@@ -1,27 +1,12 @@
 {
   "scripts": {
-    "script1":{
-      "name": "Script 1",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
-      "description": "Dummy script for testing",
-      "script": [
-        "echo hello"
-      ]
-    },
-    "script2": {
-      "name": "script2",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/af/PowerShell_Core_6.0_icon.png",
-      "description": "Dummy script for testing two",
-      "script": [
-        "echo baloo"
-      ]
-    },
-    "ipban" : {
-      "name": "Real script Doing Things",
+    "rdpfirewall" : {
+      "name": "Open RDP Port",
       "icon": "https://winaero.com/blog/wp-content/uploads/2017/04/remote-desktop-rdp-mstsc-icon.png",
-      "description": "Install IPBan software",
+      "description": "Opens the currently selected RDP port on public and private firewall modes",
       "script": [
-        "echo baloo"
+        "$port = (Get-ItemProperty -Path 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp' -name \"PortNumber\").PortNumber ; New-NetFirewallRule -DisplayName 'RDPPORT' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $port",
+        "$port = (Get-ItemProperty -Path 'HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp' -name \"PortNumber\").PortNumber ; New-NetFirewallRule -DisplayName 'RDPPORTPriv' -Profile 'Private' -Direction Inbound -Action Allow -Protocol TCP -LocalPort $port"
       ]
     }
   }
