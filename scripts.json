@@ -5,8 +5,8 @@
       "icon": "https://curl.se/logo/curl-symbol.png",
       "description": "Updates or installs cURL",
       "script": [
-        "Invoke-WebRequest -Uri \"https://curl.se/windows/latest.cgi?p=win64-mingw.zip\" -OutFile \"C:\\Windows\\curl.zip\"",
-        "Expand-Archive C:\\Windows\\curl.zip -DestinationPath C:\\Windows",
+        "Invoke-WebRequest -Uri \"https://curl.se/windows/latest.cgi?p=win64-mingw.zip\" -OutFile \"C:\\Windows\\curl.zip\" -Force",
+        "Expand-Archive C:\\Windows\\curl.zip -DestinationPath C:\\Windows -Force",
         "Move-Item \"C:\\Windows\\$((Get-Item C:\\Windows\\* ).Name | findstr curl-)\\bin\\*\" -Destination C:\\Windows\\System32\\ -Force",
         "Remove-Item \"C:\\Windows\\$((Get-Item C:\\Windows\\* ).Name | findstr curl-)\" -Force -Recurse",
         "Remove-Item \"C:\\Windows\\curl.zip\" -Force -Recurse"
